@@ -1459,6 +1459,14 @@
             const weekDay = document.getElementById('taskWeekDay').value;
             const priority = document.getElementById('taskPriority').value;
             const category = document.getElementById('taskCategory').value;
+                // اگر دسته‌بندی مطالعه بود، تاریخ کار رو برابر تاریخ امروز تنظیم کن
+if (category === 'study' && currentDate) {
+    const parts = currentDate.split('-'); // [سال، ماه، روز]
+    document.getElementById('taskYear').value = parts[0];
+    document.getElementById('taskMonth').value = parseInt(parts[1]);
+    document.getElementById('taskDay').value = parseInt(parts[2]);
+    document.getElementById('taskWeekDay').value = currentWeekDay;
+}
             
             if (!title || !day || !month || !year || !weekDay) {
                 showMessage('لطفاً فیلدهای ضروری را پر کنید', 'error');
