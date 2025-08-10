@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
     <!-- Enhanced CSP with nonce -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'nonce-darsino2024'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content;">
     
@@ -15,10 +17,19 @@
     <title>درسینو - مدیریت کارهای روزانه</title>
     
     <!-- CDN Resources with verified SRI hashes -->
-    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.6/lib/index.js" integrity="sha384-7bA4MKnJLe8S7ztCKFjf2qKF8RPMn3fW2CpBMmKr7HxdNM8pR8yEhR8QFEy6LZkA" crossorigin="anonymous" nonce="darsino2024"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js" integrity="sha384-7WjUGgDqiVqCZ8R8KbVNK0VYV1YX7z5K8r4o5fY1A9DQEwRfqN1B3mL9k2R6G0Qy" crossorigin="anonymous" nonce="darsino2024"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js" integrity="sha384-K7GVzNkBL/kQG/rT8KJb+5d4qWkFwfqA4q7gx2YLpN9R8L5jM3k1x0Z6t9fYz4s" crossorigin="anonymous" nonce="darsino2024"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&amp;display=swap" rel="stylesheet" integrity="sha384-9vX9X9XkU8V8Y8Z8A8B8C8D8E8F8G8H8I8J8K8L8M8N8O8P8Q8R8S8T8U8V8W8X8Y" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.6/lib/index.js" 
+            integrity="sha384-7bA4MKnJLe8S7ztCKFjf2qKF8RPMn3fW2CpBMmKr7HxdNM8pR8yEhR8QFEy6LZkA" 
+            crossorigin="anonymous" nonce="darsino2024"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js" 
+            integrity="sha384-7WjUGgDqiVqCZ8R8KbVNK0VYV1YX7z5K8r4o5fY1A9DQEwRfqN1B3mL9k2R6G0Qy" 
+            crossorigin="anonymous" nonce="darsino2024"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js" 
+            integrity="sha384-K7GVzNkBL/kQG/rT8KJb+5d4qWkFwfqA4q7gx2YLpN9R8L5jM3k1x0Z6t9fYz4s" 
+            crossorigin="anonymous" nonce="darsino2024"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" 
+          rel="stylesheet" 
+          integrity="sha384-9vX9X9XkU8V8Y8Z8A8B8C8D8E8F8G8H8I8J8K8L8M8N8O8P8Q8R8S8T8U8V8W8X8Y" 
+          crossorigin="anonymous">
     
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#5D5CDE">
@@ -661,7 +672,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">عنوان کار</label>
-                                <input type="text" id="taskTitle" required="" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-base" placeholder="مثال: تحویل پروژه" maxlength="200">
+                                <input type="text" id="taskTitle" required class="w-full px-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-base" placeholder="مثال: تحویل پروژه" maxlength="200">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">زمان (اختیاری)</label>
@@ -679,7 +690,7 @@
                                 <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">اولویت</label>
                                 <select id="taskPriority" class="w-full px-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-base">
                                     <option value="low">پایین</option>
-                                    <option value="medium" selected="">متوسط</option>
+                                    <option value="medium" selected>متوسط</option>
                                     <option value="high">بالا</option>
                                 </select>
                             </div>
@@ -1180,6 +1191,5 @@
 
     <!-- External Script with nonce -->
     <script nonce="darsino2024" src="js/darsino-app.js"></script>
-
-
-</body></html>
+</body>
+</html>
